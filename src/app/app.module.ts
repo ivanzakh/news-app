@@ -6,10 +6,13 @@ import { HttpClientModule } from '@angular/common/http';
 // Modules
 import { AppRoutingModule } from './app-routing.module';
 
-import { AppComponent } from './app.component';
+// Pages
 import { NewsListComponent } from './pages/news-list/news-list.component';
-import { HeaderComponent } from './components/header/header.component';
 import { NewsDetailComponent } from './pages/news-detail/news-detail.component';
+
+// Components
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
 import { NewsCardComponent } from './components/news-card/news-card.component';
 import { FooterComponent } from './components/footer/footer.component';
 

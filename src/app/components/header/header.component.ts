@@ -1,10 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
 	selector: 'app-header',
 	templateUrl: './header.component.html',
-	styleUrls: ['./header.component.styl'],
 	animations: [
 		trigger('collapseAnimation', [
 			state('void', style({
@@ -19,13 +18,8 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 		])
 	]
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 	collapseExpanded = false;
-
-	constructor() { }
-
-	ngOnInit() {
-	}
 
 	toggleCollapse() {
 		this.collapseExpanded = !this.collapseExpanded;

@@ -1,16 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
 	selector: 'app-news-card',
 	templateUrl: './news-card.component.html',
-	styleUrls: ['./news-card.component.styl']
 })
-export class NewsCardComponent implements OnInit {
+export class NewsCardComponent {
 	@Input() card: string;
-
-	constructor() { }
-
-	ngOnInit() {
-	}
-
 }
