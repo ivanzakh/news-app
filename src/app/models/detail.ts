@@ -1,4 +1,4 @@
-export interface NewsDetail {
+export interface Detail {
 	title: string;
 	text: string;
 }

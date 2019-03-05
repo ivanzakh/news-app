@@ -7,8 +7,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 // Pages
-import { NewsListComponent } from './pages/news-list/news-list.component';
-import { NewsDetailComponent } from './pages/news-detail/news-detail.component';
+import { MainPageComponent } from './pages/main-page/main-page.component';
+import { DetailPageComponent } from './pages/detail-page/detail-page.component';
 
 // Components
 import { AppComponent } from './app.component';
@@ -19,9 +19,9 @@ import { FooterComponent } from './components/footer/footer.component';
 @NgModule({
 	declarations: [
 		AppComponent,
-		NewsListComponent,
+		MainPageComponent,
 		HeaderComponent,
-		NewsDetailComponent,
+		DetailPageComponent,
 		NewsCardComponent,
 		FooterComponent
 	],

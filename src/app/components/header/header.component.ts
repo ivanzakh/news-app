@@ -5,7 +5,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 	selector: 'app-header',
 	templateUrl: './header.component.html',
 	animations: [
-		trigger('collapseAnimation', [
+		trigger('slide', [
 			state('void', style({
 				height: '0px',
 				overflow: 'hidden'
@@ -19,10 +19,10 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 	]
 })
 export class HeaderComponent {
-	collapseExpanded = false;
+	visible = false;
 
-	toggleCollapse() {
-		this.collapseExpanded = !this.collapseExpanded;
+	toggle() {
+		this.visible = !this.visible;
 	}
 
 }

@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { NewsService } from 'src/app/services/news.service';
-import { NewsItem } from '../../models/news-item';
+import { NewsCard } from '../../models/news-card';
 
 @Component({
-	selector: 'app-news-list',
-	templateUrl: './news-list.component.html',
+	selector: 'app-main-page',
+	templateUrl: './main-page.component.html',
 })
-export class NewsListComponent {
-	news: NewsItem[] = [];
+export class MainPageComponent {
+	news: NewsCard[] = [];
 
 	constructor(
 		private newsService: NewsService

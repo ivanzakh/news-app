@@ -5,9 +5,7 @@ import { Component } from '@angular/core';
 	templateUrl: './app.component.html',
 })
 export class AppComponent {
-	title = 'news-app';
-
-	onActivate() {
+	scrollToTop() {
 		window.scroll(0, 0);
 	}
 }

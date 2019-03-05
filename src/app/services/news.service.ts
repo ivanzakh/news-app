@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { NewsItem } from '../models/news-item';
-import { NewsDetail } from '../models/news-detail';
+import { NewsCard } from '../models/news-card';
+import { Detail } from '../models/detail';
 import { environment } from '../../environments/environment';
 
 @Injectable({
@@ -12,15 +12,15 @@ export class NewsService {
 
 	constructor(private http: HttpClient) { }
 
-	getNews(): Observable<NewsItem[]> {
-		return this.http.get<NewsItem[]>(environment.BASE_URL + 'get-news');
+	getNews(): Observable<NewsCard[]> {
+		return this.http.get<NewsCard[]>(environment.rootUrl + 'get-news');
 	}
 
-	getRelatedNews(newsId): Observable<NewsItem[]> {
-		return this.http.get<NewsItem[]>(environment.BASE_URL + 'get-related-news', { params: { news_id: newsId.toString() } });
+	getRelated(id): Observable<NewsCard[]> {
+		return this.http.get<NewsCard[]>(environment.rootUrl + 'get-related', { params: { id: id.toString() } });
 	}
 
-	getNewsDetail(newsId): Observable<NewsDetail> {
-		return this.http.get<NewsDetail>(environment.BASE_URL + 'get-news-detail', { params: { news_id: newsId.toString() } });
+	getDetail(id): Observable<Detail> {
+		return this.http.get<Detail>(environment.rootUrl + 'get-detail', { params: { id: id.toString() } });
 	}
 }

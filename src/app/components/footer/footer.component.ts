@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 export class FooterComponent {
 	scrollToTop(e) {
 		e.preventDefault();
-		window.scroll({top: 0, behavior: 'smooth'});
+		window.scroll(0, 0);
 	}
 }
