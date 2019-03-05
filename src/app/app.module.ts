@@ -1,16 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+
+// Modules
+import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { NewsListComponent } from './pages/news-list/news-list.component';
+import { HeaderComponent } from './components/header/header.component';
+import { NewsDetailComponent } from './pages/news-detail/news-detail.component';
+import { NewsCardComponent } from './components/news-card/news-card.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		NewsListComponent
+		NewsListComponent,
+		HeaderComponent,
+		NewsDetailComponent,
+		NewsCardComponent,
+		FooterComponent
 	],
 	imports: [
-		BrowserModule
+		BrowserModule,
+		AppRoutingModule,
+		BrowserAnimationsModule,
+		HttpClientModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

@@ -1,0 +1,18 @@
+<section class="jumbotron">
+	<div class="container">
+		<h1 class="jumbotron-heading">{{ newsDetail?.title }}</h1>
+		<p class="text-muted">{{ newsDetail?.text }}</p>
+	</div>
+</section>
+
+<section class="album py-5 bg-light">
+	<div class="container">
+		<h2>Related news</h2>
+		<hr>
+		<div class="row">
+			<div *ngFor="let item of relatedNews" class="col-md-4">
+				<app-news-card [card]="item"></app-news-card>
+			</div>
+		</div>
+	</div>
+</section>
